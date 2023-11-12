@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll Them</title>
+    <!-- Add any additional head elements here, like CSS files -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" /> <!-- Example for adding CSS -->
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <!-- Place your text here -->
+            <p>Poll Them</p>
+        </div>
+        <div class="nav-right">
+            <!-- Place your buttons here -->
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'create_poll' %}">Create Poll</a>
+            <!-- Add more buttons if needed -->
+        </div>
+    </nav>
+    
+    <main>
+        {% block content %}
+        <!-- This block will be filled with content from child templates -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Poll Them</p>
+    </footer>
+
+</body>
+</html>

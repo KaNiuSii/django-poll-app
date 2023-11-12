@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Results for Poll: "{{ poll.question }}"</h2>
+<form>
+<div>
+    {% for answer in poll.answers.all %}
+        <div class="result"><p>{{ answer.answer }} - {{ answer.votes }} vote{{ answer.votes|pluralize }}</p></div>
+    {% endfor %}
+</div>
+
+<!-- Link to go back to the main polls page -->
+<div class="button-container">
+    <a href="{% url 'index' %}" class="btn">Home</a>
+</div>
+<div class="button-container">
+    <a class="btn" id="copyLinkButton">Copy</a>
+</div>
+</form>
+<script>
+document.getElementById('copyLinkButton').addEventListener('click', function() {
+    var url = window.location.href;
+
+    // Check if 'results' is in the URL and replace it with 'vote'
+    if (url.includes("results")) {
+        url = url.replace("results", "vote");
+    }
+
+    navigator.clipboard.writeText(url).then(function() {
+        alert('Poll link copied to clipboard!');
+    }, function(err) {
+        console.error('Could not copy text: ', err);
+    });
+});
+</script>
+
+{% endblock %}

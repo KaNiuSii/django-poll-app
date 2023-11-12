@@ -1,0 +1,208 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the viewport height */
+}
+
+main {
+    flex: 1; /* Allows the main content to grow and fill the space */
+    padding: 10px; /* Optional padding for content area */
+    background-color: antiquewhite;
+}
+
+footer {
+    background-color: #333; /* Example color */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav {
+    font-size: large;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Example color */
+    padding: 5px 10px; /* Adjust padding to control height */
+}
+
+nav .nav-left, nav .nav-right {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+.nav-left p {
+    
+    margin: 0;
+    color: white;
+    /* Additional styles for your text */
+}
+
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px; /* Space between buttons */
+    padding: 5px 10px; /* Adjust padding as needed */
+}
+
+.nav-right a:hover {
+    background-color: #111;
+}
+
+/* */
+
+/* Styling for the 'Last Polls' heading */
+h2 {
+    color: #333; /* Dark grey color */
+    text-align: center;
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Styling for each poll item */
+.content-div {
+    background-color: #333; /* Light grey background */
+    border: 1px solid #ddd; /* Light grey border */
+    padding: 15px;
+    margin: 10px auto; /* Auto margins for horizontal centering */
+    border-radius: 10px; /* Rounded corners for the box */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    width: 80%; /* Set a width for the div */
+    max-width: 500px; /* Maximum width to maintain readability */
+    text-align: center;
+}
+
+.content-div a {
+    color: white; /* Link color */
+    text-decoration: none; /* No underline */
+    font-size: 18px; /* Larger font size for visibility */
+    display: block; /* Make the link fill the div */
+}
+
+.content-div:hover {
+    background-color:lightgreen; /* Slight background color change on hover */
+}
+
+
+
+/* Styling for the 'No polls available' message */
+.no-polls {
+    color: #666; /* Medium grey color */
+    text-align: center;
+    margin-top: 20px; /* Space above the message */
+}
+
+/* Styling for the form */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for form fields */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+form input[type="text"] {
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Styling for answer forms */
+.answer-form {
+    margin-bottom: 15px;
+    padding: 0 8px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Optional: for some space above the button */
+}
+
+/* Styling for the submit button */
+form button[type="submit"] {
+    background-color: lightgreen;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button[type="submit"]:hover {
+    background-color:chartreuse;
+}
+
+form input[type="radio"] {
+    margin-right: 10px;
+}
+
+.radio-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* Spacing between each radio option */
+}
+
+/* Styling for Results */
+.result {
+    font-size: 16px;
+    color: white;
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+/* Styling for the Back Link */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    width: 100px;
+    display: block;
+    margin: 20px auto;
+}
+
+.back-link:hover {
+    background-color: #45a049;
+}
+
+.btn {
+    background-color: lightgreen;
+    color: #333;
+    font-weight: bolder;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color:chartreuse;
+}
